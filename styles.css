@@ -298,7 +298,6 @@ section{scroll-margin-top:var(--nav-h)}
 .spark{position:absolute;border-radius:var(--radius-sm);padding:11px 15px;z-index:3;display:flex;align-items:center;gap:9px;font-size:.8rem;font-weight:600;color:var(--primary)}
 .spark svg{width:18px;height:18px;color:var(--secondary)}
 .spark-1{top:-14px;left:-10px}
-.spark-2{bottom:6px;right:-18px}
 
 /* ============================================================
    PAGE HERO (subpages)
@@ -449,11 +448,6 @@ section{scroll-margin-top:var(--nav-h)}
 .cinfo .ci-meta .v{color:var(--primary);font-weight:600;margin-top:3px}
 .cinfo .ci-meta a{transition:color .25s ease}
 .cinfo .ci-meta a:hover{color:var(--secondary)}
-.contact-socials{display:flex;gap:11px;margin-top:28px;padding-top:24px;border-top:1px solid rgba(10,35,66,.08)}
-.contact-socials a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:var(--primary);
-  background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.12);transition:all .3s var(--ease)}
-.contact-socials a:hover{background:var(--grad-brand);color:#fff;transform:translateY(-3px);border-color:transparent}
-.contact-socials a svg{width:19px;height:19px}
 
 .field{margin-bottom:18px}
 .field-row{display:grid;gap:18px}
@@ -498,11 +492,6 @@ section{scroll-margin-top:var(--nav-h)}
 .footer-brand .brand-text .b1,.footer-brand .brand-text .b3{color:#fff}
 .footer-brand .brand-text .b2{color:#9fb3d1}
 .footer-brand p{margin-top:18px;font-size:.92rem;color:#9fb3d1;max-width:300px}
-.socials{display:flex;gap:11px;margin-top:22px}
-.socials a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:#cdd9ec;
-  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);transition:all .3s var(--ease)}
-.socials a:hover{background:var(--grad-brand);color:#fff;transform:translateY(-3px);border-color:transparent}
-.socials a svg{width:19px;height:19px}
 
 .fcol h5{color:#fff;font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px}
 .fcol ul li{margin-bottom:13px}
@@ -510,16 +499,6 @@ section{scroll-margin-top:var(--nav-h)}
 .fcol ul a:hover{color:#fff}
 .fcol .ci{display:flex;gap:11px;margin-bottom:15px;font-size:.92rem;color:#9fb3d1;align-items:flex-start}
 .fcol .ci svg{width:18px;height:18px;color:var(--accent);flex-shrink:0;margin-top:2px}
-
-.news p{font-size:.9rem;color:#9fb3d1;margin-bottom:16px}
-.news-form{display:flex;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:6px}
-.news-form input{flex:1;background:none;border:none;color:#fff;padding:11px 13px;font-size:.9rem;outline:none}
-.news-form input::placeholder{color:#7e93b4}
-.news-form button{width:44px;height:44px;border-radius:10px;background:var(--grad-brand);color:#fff;display:grid;place-items:center;flex-shrink:0;transition:transform .3s var(--ease)}
-.news-form button:hover{transform:translateY(-2px)}
-.news-form button svg{width:18px;height:18px}
-.news-note{font-size:.82rem;color:#22c55e;margin-top:10px;opacity:0;transition:opacity .3s ease}
-.news-note.show{opacity:1}
 
 .footer-bottom{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.1);padding-block:24px;
   display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;font-size:.85rem;color:#8ba0bf}
@@ -546,8 +525,7 @@ section{scroll-margin-top:var(--nav-h)}
   .ind-grid{grid-template-columns:repeat(3,1fr)}
 }
 @media (min-width:768px){
-  .footer-top{grid-template-columns:1.4fr 1fr 1fr;column-gap:40px}
-  .news{grid-column:1/-1}
+  .footer-top{grid-template-columns:repeat(2,1fr);column-gap:40px}
   .footer-bottom{flex-direction:row;justify-content:space-between;text-align:left}
 }
 @media (min-width:900px){
@@ -564,12 +542,8 @@ section{scroll-margin-top:var(--nav-h)}
     background:linear-gradient(90deg,rgba(37,99,235,.15),rgba(79,140,255,.6),rgba(37,99,235,.15));
     background-size:200% 100%;animation:flowline 4s linear infinite}
   .footer-top{grid-template-columns:1.5fr 1fr 1fr 1.3fr}
-  .news{grid-column:auto}
 }
 @keyframes flowline{from{background-position:0 0}to{background-position:200% 0}}
-@media (min-width:1100px){
-  .footer-top{grid-template-columns:1.6fr 1fr 1fr 1fr 1.4fr}
-}
 
 @media (max-width:520px){
   .hero-actions .btn{flex:1}

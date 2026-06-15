@@ -124,23 +124,6 @@
     go(0); play();
   }
 
-  /* ---------- Newsletter (footer) ---------- */
-  var nForm = document.getElementById('newsForm');
-  if(nForm){
-    nForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      var email = document.getElementById('newsEmail');
-      var note = document.getElementById('newsNote');
-      if(email.value && /\S+@\S+\.\S+/.test(email.value)){
-        note.classList.add('show');
-        email.value = '';
-        setTimeout(function(){ note.classList.remove('show'); }, 4000);
-      } else {
-        email.focus();
-      }
-    });
-  }
-
   /* ---------- Contact form (Contact page) ---------- */
   var cForm = document.getElementById('contactForm');
   if(cForm){
