@@ -2,22 +2,22 @@
    DESIGN TOKENS
 ============================================================ */
 :root{
-  --primary:#0A2342;
-  --secondary:#2563EB;
-  --accent:#4F8CFF;
-  --bg:#F6F8FC;
+  --primary:#0A4FAF;
+  --secondary:#2E73D8;
+  --accent:#3C90FF;
+  --bg:#F6F9FC;
   --text:#111827;
-  --subtext:#6B7280;
+  --subtext:#5B6675;
 
   --glass:rgba(255,255,255,0.65);
   --glass-strong:rgba(255,255,255,0.82);
   --glass-border:rgba(255,255,255,0.75);
-  --glass-shadow:0 24px 60px -22px rgba(10,35,66,0.30);
-  --card-shadow:0 12px 40px -18px rgba(10,35,66,0.22);
+  --glass-shadow:0 24px 60px -22px rgba(10,46,110,0.30);
+  --card-shadow:0 12px 40px -18px rgba(10,46,110,0.22);
 
-  --grad-brand:linear-gradient(135deg,#2563EB 0%,#4F8CFF 100%);
-  --grad-text:linear-gradient(115deg,#2563EB 0%,#4F8CFF 60%,#7AA8FF 100%);
-  --grad-dark:linear-gradient(135deg,#0A2342 0%,#0E2C56 45%,#143b72 100%);
+  --grad-brand:linear-gradient(135deg,#2E73D8 0%,#3C90FF 100%);
+  --grad-text:linear-gradient(115deg,#0A4FAF 0%,#2E73D8 45%,#3C90FF 100%);
+  --grad-dark:linear-gradient(135deg,#063B86 0%,#0A4FAF 45%,#2E73D8 100%);
 
   --font-sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   --font-serif:'Source Serif 4','Iowan Old Style',Georgia,'Times New Roman',serif;
@@ -243,8 +243,8 @@ section{scroll-margin-top:var(--nav-h)}
   background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.7);
   box-shadow:0 8px 22px -16px rgba(10,35,66,.5);
 }
-.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.18);animation:pulse 2.4s ease-in-out infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(34,197,94,.18)}50%{box-shadow:0 0 0 7px rgba(34,197,94,.05)}}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(60,144,255,.22);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(60,144,255,.22)}50%{box-shadow:0 0 0 7px rgba(60,144,255,.05)}}
 
 .hero h1{
   font-family:var(--font-serif);font-weight:600;color:var(--primary);
@@ -275,12 +275,12 @@ section{scroll-margin-top:var(--nav-h)}
 .dcard .dlabel{font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--subtext)}
 .dcard-main .dtitle{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
 .dcard-main .dtitle span{font-weight:700;color:var(--primary);font-size:.96rem}
-.dcard-main .pill{font-size:.7rem;font-weight:700;color:#16a34a;background:rgba(34,197,94,.12);padding:5px 9px;border-radius:8px}
+.dcard-main .pill{font-size:.7rem;font-weight:700;color:var(--secondary);background:rgba(60,144,255,.12);padding:5px 9px;border-radius:8px}
 .drow{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
 .dval{font-size:2rem;font-weight:800;color:var(--primary);line-height:1;letter-spacing:-.02em}
-.dval.green{color:#16a34a}
+.dval.green{color:var(--secondary)}
 .dsub{font-size:.8rem;color:var(--subtext);margin-top:7px}
-.dsub .up{color:#16a34a;font-weight:700}
+.dsub .up{color:var(--accent);font-weight:700}
 .chart{width:130px;height:54px;flex-shrink:0}
 
 .dmini{display:flex;align-items:center;gap:16px}
@@ -289,15 +289,24 @@ section{scroll-margin-top:var(--nav-h)}
   box-shadow:0 10px 22px -10px rgba(37,99,235,.6);
 }
 .dmini .icon.blue{background:var(--grad-brand)}
-.dmini .icon.mint{background:linear-gradient(135deg,#10b981,#34d399);box-shadow:0 10px 22px -10px rgba(16,185,129,.6)}
+.dmini .icon.mint{background:linear-gradient(135deg,#2E73D8,#3C90FF);box-shadow:0 10px 22px -10px rgba(46,115,216,.6)}
 .dmini .icon svg{width:22px;height:22px}
 .dmini .meta{flex:1}
 .dmini .meta .v{font-size:1.5rem;font-weight:800;color:var(--primary);line-height:1.1;letter-spacing:-.02em}
-.dmini .meta .v.mint{color:#10b981}
+.dmini .meta .v.mint{color:var(--secondary)}
 
 .spark{position:absolute;border-radius:var(--radius-sm);padding:11px 15px;z-index:3;display:flex;align-items:center;gap:9px;font-size:.8rem;font-weight:600;color:var(--primary)}
 .spark svg{width:18px;height:18px;color:var(--secondary)}
 .spark-1{top:-14px;left:-10px}
+.dtile{width:62px;height:62px;border-radius:16px;flex-shrink:0;display:grid;place-items:center;color:#fff;background:var(--grad-brand);box-shadow:0 12px 24px -12px rgba(46,115,216,.6),inset 0 1px 0 rgba(255,255,255,.3)}
+.dtile svg{width:30px;height:30px}
+
+/* brand logo (header / mobile) + footer wordmark */
+.brand-logo{height:50px;width:auto;display:block;mix-blend-mode:multiply;transition:height .35s var(--ease)}
+.nav.scrolled .brand-logo{height:44px}
+.footer-wordmark{display:inline-flex;flex-direction:column;gap:3px}
+.footer-wordmark .fw-1{font-weight:800;font-size:1.18rem;letter-spacing:.03em;color:#fff;line-height:1}
+.footer-wordmark .fw-2{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:#9fc0ee;font-weight:600}
 
 /* ============================================================
    PAGE HERO (subpages)
@@ -359,7 +368,7 @@ section{scroll-margin-top:var(--nav-h)}
   background-size:46px 46px;-webkit-mask-image:radial-gradient(ellipse at 70% 0%,#000,transparent 70%);mask-image:radial-gradient(ellipse at 70% 0%,#000,transparent 70%)}
 .stats-grid{position:relative;z-index:2;display:grid;gap:30px;grid-template-columns:repeat(2,1fr);text-align:center}
 .stat .num{font-family:var(--font-serif);font-weight:700;color:#fff;font-size:clamp(2.3rem,5vw,3.3rem);line-height:1;letter-spacing:-.02em}
-.stat .num .gtext{background:linear-gradient(120deg,#9cc0ff,#4F8CFF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat .num .gtext{background:linear-gradient(120deg,#bcd6ff,#3C90FF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .stat .lbl{color:#b9cbe6;font-size:.95rem;margin-top:12px;font-weight:500}
 
 /* ============================================================
@@ -375,8 +384,8 @@ section{scroll-margin-top:var(--nav-h)}
   border:1px solid var(--glass-border);box-shadow:var(--glass-shadow);
 }
 .t-quote-mark{font-family:var(--font-serif);font-size:4.5rem;line-height:.5;color:rgba(37,99,235,.18);height:34px}
-.t-stars{display:flex;justify-content:center;gap:5px;margin-bottom:20px;color:#f5b50a}
-.t-stars svg{width:21px;height:21px;filter:drop-shadow(0 2px 5px rgba(245,181,10,.3))}
+.t-stars{display:flex;justify-content:center;gap:5px;margin-bottom:20px;color:#2E73D8}
+.t-stars svg{width:21px;height:21px;filter:drop-shadow(0 2px 5px rgba(46,115,216,.3))}
 .t-quote{font-family:var(--font-serif);font-size:clamp(1.1rem,2vw,1.45rem);color:var(--primary);font-style:italic;line-height:1.5;margin-bottom:26px}
 .t-person{display:flex;align-items:center;justify-content:center;gap:14px}
 .t-person .av{width:54px;height:54px;border-radius:50%;overflow:hidden;border:2px solid #fff;box-shadow:0 6px 16px -6px rgba(10,35,66,.4)}
@@ -396,7 +405,7 @@ section{scroll-margin-top:var(--nav-h)}
 .t-dot.active{width:28px;border-radius:6px;background:var(--grad-brand)}
 
 /* ============================================================
-   INDUSTRIES
+   ICON CARD GRID (Why Choose Us)
 ============================================================ */
 .ind-grid{display:grid;gap:18px;margin-top:54px;grid-template-columns:repeat(2,1fr)}
 .ind-card{
@@ -463,8 +472,8 @@ section{scroll-margin-top:var(--nav-h)}
 .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px rgba(79,140,255,.16)}
 .field input::placeholder,.field textarea::placeholder{color:#9aa6b6}
 .form-submit{width:100%;margin-top:4px}
-.form-note{margin-top:16px;padding:13px 16px;border-radius:12px;background:rgba(34,197,94,.12);
-  border:1px solid rgba(34,197,94,.25);color:#15803d;font-size:.92rem;font-weight:600;display:none}
+.form-note{margin-top:16px;padding:13px 16px;border-radius:12px;background:rgba(60,144,255,.12);
+  border:1px solid rgba(60,144,255,.28);color:var(--primary);font-size:.92rem;font-weight:600;display:none}
 .form-note.show{display:block}
 
 /* ============================================================

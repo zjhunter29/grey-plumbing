@@ -51,14 +51,14 @@
     var target = parseFloat(el.getAttribute('data-target'));
     var prefix = el.getAttribute('data-prefix') || '';
     var suffix = el.getAttribute('data-suffix') || '';
-    var setFinal = function(){ el.textContent = prefix + target + suffix; };
+    var setFinal = function(){ el.textContent = prefix + target.toLocaleString('en-US') + suffix; };
     // If motion is reduced or frames are paused (background tab), skip the animation.
     if(reduce || document.hidden){ setFinal(); return; }
     var dur = 1700, start = null;
     var tick = function(ts){
       if(!start) start = ts;
       var p = Math.min((ts - start) / dur, 1);
-      el.textContent = prefix + Math.round(target * (1 - Math.pow(1 - p, 3))) + suffix;
+      el.textContent = prefix + Math.round(target * (1 - Math.pow(1 - p, 3))).toLocaleString('en-US') + suffix;
       if(p < 1){ requestAnimationFrame(tick); } else { setFinal(); }
     };
     requestAnimationFrame(tick);
