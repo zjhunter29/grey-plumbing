@@ -2,7 +2,7 @@
 
 A premium, fully responsive **multi-page** marketing website for Grey Plumbing Inc., a residential and commercial plumbing company serving Indianapolis, Indiana. The Home page is a focused hero; every other section lives on its own page reached from the top navigation / hamburger menu. Clean, modern, blue-themed UI built with plain HTML, CSS, and vanilla JavaScript — no frameworks, no build step.
 
-**Live site:** https://zjhunter29.github.io/innovative-cpa/
+**Live site:** https://zjhunter29.github.io/grey-plumbing/
 
 ## Pages
 
