@@ -375,6 +375,8 @@ section{scroll-margin-top:var(--nav-h)}
   border:1px solid var(--glass-border);box-shadow:var(--glass-shadow);
 }
 .t-quote-mark{font-family:var(--font-serif);font-size:4.5rem;line-height:.5;color:rgba(37,99,235,.18);height:34px}
+.t-stars{display:flex;justify-content:center;gap:5px;margin-bottom:20px;color:#f5b50a}
+.t-stars svg{width:21px;height:21px;filter:drop-shadow(0 2px 5px rgba(245,181,10,.3))}
 .t-quote{font-family:var(--font-serif);font-size:clamp(1.1rem,2vw,1.45rem);color:var(--primary);font-style:italic;line-height:1.5;margin-bottom:26px}
 .t-person{display:flex;align-items:center;justify-content:center;gap:14px}
 .t-person .av{width:54px;height:54px;border-radius:50%;overflow:hidden;border:2px solid #fff;box-shadow:0 6px 16px -6px rgba(10,35,66,.4)}
